@@ -1,0 +1,24 @@
+{
+  "name": "gaddhang",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass --watch scss -o public/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FredrikaEricsson/gaddhang.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FredrikaEricsson/gaddhang/issues"
+  },
+  "homepage": "https://github.com/FredrikaEricsson/gaddhang#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
