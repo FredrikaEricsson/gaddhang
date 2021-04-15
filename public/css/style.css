@@ -1,2 +1,52 @@
 body {
-  background-color: blue; }
+  background-color: #5bc3f0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 3% 97%; }
+  body header {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%; }
+    body header .menu {
+      display: grid;
+      grid-template-columns: 50% 38% 12%;
+      grid-template-rows: 100% auto; }
+      body header .menu .menuLogo {
+        grid-column: 1;
+        grid-row: 1;
+        width: 183px;
+        height: 47px;
+        margin: 2%; }
+      body header .menu .hamburgerMenu {
+        display: grid;
+        grid-column: 3;
+        grid-row: 1; }
+        body header .menu .hamburgerMenu .burgerIcon {
+          text-decoration: none;
+          padding: 3px 6px;
+          background-color: #147eb2;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          body header .menu .hamburgerMenu .burgerIcon .fa {
+            font-size: 2em;
+            color: #ffffff; }
+      body header .menu #menuItems {
+        display: none;
+        width: 100%;
+        list-style: none;
+        grid-column: 2 / span 3;
+        grid-row: 2;
+        margin: 0%;
+        padding: 0%;
+        text-align: right;
+        z-index: 1;
+        background-color: #147eb2; }
+        body header .menu #menuItems .menuLink {
+          font-size: 1em; }
+  body .aboutUs .logoSquare {
+    width: 100%; }
+
+@media only screen and (min-width: 768px) {
+  /* Desktop: */ }
