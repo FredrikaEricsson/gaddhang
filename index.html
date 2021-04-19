@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -32,70 +33,106 @@
         </ul>
       </nav>
     </header>
+
     <section class="eventSection">
       <img
         class="eventImage"
         src="./Images/ocean-bus.jpg"
         alt="Ocean-bus-gäddhäng"
       />
-      <article class="swimWithFish">
-        <h2>Simma med fiskarna!</h2>
-        <p>
+      <article class="eventInfo">
+        <h2 class="headline">Simma med fiskarna!</h2>
+        <p class="paragraph">
           Har du alltid drömt om att leva som en fisk? Är du lite av en
           landkrabba, men längtar ändå ut till det stora blå? Den här sommaren
           får du som bor i Stockholm chansen att hoppa in i vår Gäddbuss och åka
-          direkt ut från hamnet ner i Mälaren. Reguljära turer varje dag under
-          hela juli månad så länge det inte blir åska. Det är trots allt inte en
-          elektrisk ål vi kör runt med.
+          direkt ut från hamnet ner i Mälaren.
+        </p>
+
+        <p class="paragraph">
+          Reguljära turer varje dag under hela juli månad så länge det inte blir
+          åska. Det är trots allt inte en elektrisk ål vi kör runt med.
         </p>
       </article>
-      <map class="eventMap"></map>
-      <article class="pricesOpeningHours">
-        <h2>Priser och öppettider</h2>
-        <ul>
+      <map class="eventMap"
+        ><iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2035.1355690409275!2d18.0757007157971!3d59.33069041795586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d5a3e6a73b5%3A0x1e19f4a3487f94e6!2sNybrokajen%20(Stockholm)!5e0!3m2!1sen!2sse!4v1618819532450!5m2!1sen!2sse"
+          width="225"
+          height="130"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe
+      ></map>
+      <article class="prices">
+        <h2 class="headline">Priser och öppettider</h2>
+        <ul class="priceList">
           <li>Vuxna - 140 kr</li>
           <li>Barn - 70 kr</li>
         </ul>
-        <p>
+      </article>
+      <article class="openingHours">
+        <p class="paragraph">
           Är du medlem i Gäddhäng åker du självklart GRATIS! Kör alla dagar
           mellan 10-16
         </p>
+        <p class="paragraph">
+           Kör alla dagar
+            mellan 10-16
+          </p>
       </article>
       <article class="terms">
-        <h2>Villkor</h2>
-        <p>
+        <h2 class="headline">Villkor</h2>
+        <p class="paragraph">
           På grund av säkerhetsskäl tar vi ej emot cyklar ombord. Detta gäller
           även elsparkcyklar. Barnvagn är självklart tillåtet, men i mån av
-          plats. Bussen är rullstolsanpassad. Prata med personal på plats för
-          att få extra assistans. Toalett finns ej på båten. Ej heller tillåtet
+          plats. 
+        </p>
+          <p class="paragraph">Bussen är rullstolsanpassad. Prata med personal på plats för
+          att få extra assistans. 
+        </p>
+          <p class="paragraph">Toalett finns ej på båten. Ej heller tillåtet
           att “kasta vatten” överbord.
         </p>
       </article>
     </section>
 
-    <div class="divider"></div>
-    <section class="aboutUs">
+    <div class="animation">
+        <img class="pikeBus"src="./Images/fish-bus.png" alt="gäddhäng-buss">
+        <div class="water"></div>
+    </div>
+    <section class="aboutUsSection">
       <img
         class="logoSquare"
         src="./Images/logo-square.png"
         alt="Gäddhäng-Logga-Square"
       />
-      <article class="whoWeAre">
-        <h2>Vilka är vi?</h2>
-        <p>
+      <div id="firstParagraph">
+        <h2 class="headline">Vilka är vi?</h2>
+        <p class="paragraph">
           Gäddhäng är föreningen för dig som är mellan 4-12 år och vill lära dig
           mer om fiske! Du behöver inte vara en fena på det, vi tar emot både
-          nybörjare och proffs! Varje år arrangerar vi fiskelägret Bakom flötet
-          där man får lära sig allt ifrån vilket typ av bete man ska använda för
-          att fånga en speciell fisk, till att visa hur man rensar och steker
-          strömming! Vi har också ett nära samarbete med föreningen Soppatorsk,
-          som informerar om överfisket i Östersjön.
+          nybörjare och proffs!
         </p>
-      </article>
+      </div>
+      <div id="secondParagraph">
+        <p class="paragraph">
+          Varje år arrangerar vi fiskelägret Bakom flötet där man får lära sig
+          allt ifrån vilket typ av bete man ska använda för att fånga en
+          speciell fisk, till att visa hur man rensar och steker strömming!
+        </p>
+      </div>
+      <div id="thirdParagraph">
+        <p class="paragraph">
+          Vi har också ett nära samarbete med föreningen Soppatorsk, som
+          informerar om överfisket i Östersjön.
+        </p>
+      </div>
     </section>
+
     <footer class="contact">
       <article class="adress">
-        <h3>Adress</h3>
+        <h4 class="smallHeadline">Adress</h3>
         <ul>
           <li>Gäddhäng AB</li>
           <li>Fiskargatan 3, 116 20</li>
@@ -103,7 +140,7 @@
         </ul>
       </article>
       <article class="contactUs">
-        <h3>Kontakta oss</h3>
+        <h4 class="smallHeadline">Kontakta oss</h3>
         <ul>
           <li>E-mail: info@gaddhang.se</li>
           <li>Telefon: 08-714 48 11 47</li>
@@ -111,7 +148,7 @@
         </ul>
       </article>
       <article class="socialMedia">
-        <h3>Sociala medier</h3>
+        <h4 class="smallHeadline">Sociala medier</h3>
         <ul>
           <li>Facebook</li>
           <li>Instagram</li>

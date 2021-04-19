@@ -1,6 +1,18 @@
 //contained within this file are all your resets, variables, mixins, and any utility classes.
 
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Sedgwick+Ave&display=swap");
+
 $background-color: #5bc3f0;
 $orange-color: #ffa033;
 $text-color: #ffffff;
 $secondary-color: #147eb2;
+
+@mixin paragraph {
+  font-family: "Lato", sans-serif;
+  color: $text-color;
+}
+
+@mixin headline {
+  font-family: "Sedgwick Ave", cursive;
+  color: $text-color;
+}
