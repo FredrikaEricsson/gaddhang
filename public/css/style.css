@@ -95,8 +95,16 @@ body {
       body .eventSection .terms .paragraph {
         font-family: "Lato", sans-serif;
         color: #ffffff; }
-  body .divider {
+  body .animation {
     grid-row: 3; }
+    body .animation #pikeBus {
+      width: 55%; }
+    body .animation .water {
+      z-index: 1;
+      height: 50px;
+      position: relative;
+      top: -37px;
+      background-color: #147eb2; }
   body .aboutUsSection {
     display: grid;
     grid-row: 4;
