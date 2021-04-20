@@ -15,4 +15,9 @@ $secondary-color: #147eb2;
 @mixin headline {
   font-family: "Sedgwick Ave", cursive;
   color: $text-color;
+
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-color: $orange-color;
+  text-decoration-thickness: 4px;
 }

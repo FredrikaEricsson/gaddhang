@@ -1,4 +1,4 @@
-window.onload = (event) => {
+window.onloa = (event) => {
   let pikeBus = document.getElementById("pikeBus");
   gsap.set(pikeBus, {
     rotation: 10,
