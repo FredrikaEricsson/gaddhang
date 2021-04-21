@@ -21,3 +21,21 @@ $secondary-color: #147eb2;
   text-decoration-color: $orange-color;
   text-decoration-thickness: 4px;
 }
+
+@mixin headlineDesktop {
+  font-family: "Sedgwick Ave", cursive;
+  color: $text-color;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-color: $orange-color;
+  text-decoration-thickness: 9px;
+  font-size: 3em;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+@mixin paragraphDesktop {
+  font-family: "Lato", sans-serif;
+  color: $text-color;
+  font-size: 1.5em;
+}

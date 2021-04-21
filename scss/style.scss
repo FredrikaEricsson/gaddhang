@@ -79,7 +79,7 @@ body {
     display: grid;
     grid-row: 2;
     grid-template-columns: 3% 33% 61% 3%;
-    grid-template-rows: 19% 27% 15% 11% 28%;
+    grid-template-rows: 17% 25% 15% 16% 25%;
 
     .eventImage {
       width: 100%;
@@ -100,8 +100,12 @@ body {
     .eventMap {
       grid-column: 3;
       grid-row: 3;
-      width: 100%;
+
       margin-top: 14px;
+      iframe {
+        width: 225px;
+        height: 130px;
+      }
     }
     .prices {
       grid-column: 2;
@@ -197,7 +201,8 @@ body {
     display: grid;
     grid-row: 5;
     grid-column: 1 / span 1;
-    grid-template-columns: 5% 29% 46% 18% 2%;
+    grid-template-columns: 2% 30% 42% 24% 2%;
+
     grid-template-rows: 100%;
     background-color: $secondary-color;
     .adress {
@@ -205,14 +210,13 @@ body {
       grid-column: 2;
       .smallHeadline {
         @include paragraph;
-        font-size: 15px;
+
         margin-bottom: 0%;
       }
       ul {
         @include paragraph;
         list-style: none;
         padding: 0%;
-        font-size: 13px;
       }
     }
     .contactUs {
@@ -220,14 +224,13 @@ body {
       grid-column: 3;
       .smallHeadline {
         @include paragraph;
-        font-size: 15px;
+
         margin-bottom: 0%;
       }
       ul {
         @include paragraph;
         list-style: none;
         padding: 0%;
-        font-size: 13px;
       }
     }
     .socialMedia {
@@ -235,19 +238,247 @@ body {
       grid-column: 4;
       .smallHeadline {
         @include paragraph;
-        font-size: 15px;
+
         margin-bottom: 0%;
       }
       ul {
         @include paragraph;
         list-style: none;
         padding: 0%;
-        font-size: 13px;
       }
     }
   }
 }
 
 @media only screen and (min-width: 768px) {
-  /* Desktop: */
+  body {
+    header {
+      display: grid;
+      grid-row: 1;
+      grid-template-columns: 100%;
+      grid-template-rows: 100%;
+
+      .menu {
+        display: grid;
+        grid-template-columns: 3% 41% 53% 3%;
+        grid-template-rows: 100%;
+        height: 150px;
+
+        .menuLogo {
+          grid-column: 2;
+          grid-row: 1;
+          width: auto;
+          height: 150px;
+        }
+
+        .hamburgerMenu {
+          display: none;
+
+          .burgerIcon {
+            display: none;
+
+            .fa {
+              display: none;
+            }
+          }
+        }
+
+        #menuItems {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          @include paragraph;
+          list-style: none;
+          grid-column: 3;
+          grid-row: 1;
+
+          background-color: unset;
+          z-index: 0;
+          justify-content: space-evenly;
+          .menuLink {
+            font-size: 2em;
+            padding: 2%;
+            a {
+              text-decoration: none;
+              @include paragraph;
+            }
+          }
+        }
+      }
+    }
+    .eventSection {
+      display: grid;
+      grid-row: 2;
+      grid-template-columns: 4% 46% 46% 4%;
+      grid-template-rows: 49% 26% 10% 15%;
+
+      .eventImage {
+        width: 100%;
+
+        grid-column: 2 / span 2;
+        grid-row: 1;
+      }
+      #eventInfo {
+        grid-column: 2;
+        grid-row: 2;
+        .headline {
+          @include headlineDesktop;
+        }
+        .paragraph {
+          @include paragraphDesktop;
+        }
+      }
+      .eventMap {
+        grid-column: 3;
+        grid-row: 2;
+
+        margin-top: 60px;
+        margin-left: 30px;
+        margin-bottom: 40px;
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .prices {
+        grid-column: 2;
+        grid-row: 3;
+        .headline {
+          @include headlineDesktop;
+        }
+
+        .priceList {
+          list-style: none;
+          padding: 0%;
+          @include paragraphDesktop;
+        }
+      }
+      .openingHours {
+        grid-column: 2;
+        grid-row: 4;
+        .paragraph {
+          @include paragraphDesktop;
+        }
+      }
+
+      .terms {
+        grid-column: 3;
+        grid-row: 3 / span 2;
+        text-align: end;
+        margin-left: 30px;
+        .headline {
+          @include headlineDesktop;
+        }
+        .paragraph {
+          @include paragraphDesktop;
+        }
+      }
+    }
+    .animation {
+      #pikeBus {
+        width: 30%;
+      }
+      .water {
+        z-index: 1;
+        height: 44px;
+        position: relative;
+        top: -73px;
+        background-color: $secondary-color;
+        margin: 0% 2%;
+      }
+    }
+    #aboutUsSection {
+      display: grid;
+      grid-row: 4;
+      grid-template-columns: 3% 30% 64% 3%;
+      grid-template-rows: 34% 27% 39%;
+
+      .logoSquare {
+        width: 100%;
+        grid-column: 2;
+        grid-row: 1 / span 3;
+        margin-top: 0%;
+      }
+      #firstParagraph {
+        grid-column: 3;
+        grid-row: 1;
+        text-align: right;
+        .headline {
+          @include headlineDesktop;
+          margin-top: 0%;
+        }
+        .paragraph {
+          @include paragraphDesktop;
+        }
+      }
+      #secondParagraph {
+        grid-column: 3;
+        grid-row: 2;
+        text-align: right;
+
+        .paragraph {
+          @include paragraphDesktop;
+          margin-top: 3%;
+        }
+      }
+      #thirdParagraph {
+        grid-column: 3;
+        grid-row: 3;
+        text-align: right;
+        .paragraph {
+          @include paragraphDesktop;
+        }
+      }
+    }
+    #contact {
+      display: grid;
+      grid-row: 5;
+      grid-column: 1 / span 1;
+      grid-template-columns: 5% 33% 39% 21% 2%;
+      grid-template-rows: 100%;
+      background-color: $secondary-color;
+      .adress {
+        grid-row: 1;
+        grid-column: 2;
+        .smallHeadline {
+          @include paragraphDesktop;
+
+          margin-bottom: 0%;
+        }
+        ul {
+          @include paragraphDesktop;
+          list-style: none;
+          padding: 0%;
+        }
+      }
+      .contactUs {
+        grid-row: 1;
+        grid-column: 3;
+        .smallHeadline {
+          @include paragraphDesktop;
+
+          margin-bottom: 0%;
+        }
+        ul {
+          @include paragraphDesktop;
+          list-style: none;
+          padding: 0%;
+        }
+      }
+      .socialMedia {
+        grid-row: 1;
+        grid-column: 4;
+        .smallHeadline {
+          @include paragraphDesktop;
+
+          margin-bottom: 0%;
+        }
+        ul {
+          @include paragraphDesktop;
+          list-style: none;
+          padding: 0%;
+        }
+      }
+    }
+  }
 }
