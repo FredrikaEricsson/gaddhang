@@ -56,7 +56,6 @@ body {
         grid-row: 3;
         margin: 0%;
         padding: 0%;
-
         z-index: 1;
         background-color: $secondary-color;
 
@@ -68,28 +67,31 @@ body {
           padding-top: 2%;
           padding-right: 5%;
           a {
-            text-decoration: none;
             @include paragraph;
+            text-decoration: none;
           }
         }
       }
     }
   }
+  .hero {
+    display: grid;
+    grid-template-columns: 3% 94% 3%;
+    grid-template-rows: 100%;
+    .eventImage {
+      grid-column: 2;
+      grid-row: 1;
+      width: 100%;
+    }
+  }
   .eventSection {
     display: grid;
-    grid-row: 2;
     grid-template-columns: 3% 33% 61% 3%;
-    grid-template-rows: 17% 25% 15% 16% 25%;
+    grid-template-rows: 28% 18% 16% 38%;
 
-    .eventImage {
-      width: 100%;
-
-      grid-column: 2 / span 2;
-      grid-row: 1;
-    }
     #eventInfo {
       grid-column: 2 / span 2;
-      grid-row: 2;
+      grid-row: 1;
       .headline {
         @include headline;
       }
@@ -99,17 +101,17 @@ body {
     }
     .eventMap {
       grid-column: 3;
-      grid-row: 3;
+      grid-row: 2;
 
       margin-top: 14px;
       iframe {
-        width: 225px;
-        height: 130px;
+        width: 90%;
+        height: 100%;
       }
     }
     .prices {
       grid-column: 2;
-      grid-row: 3;
+      grid-row: 2;
       .headline {
         @include headline;
       }
@@ -122,7 +124,7 @@ body {
     }
     .openingHours {
       grid-column: 2 / span 2;
-      grid-row: 4;
+      grid-row: 3;
       .paragraph {
         @include paragraph;
       }
@@ -130,7 +132,7 @@ body {
 
     .terms {
       grid-column: 2 / span 2;
-      grid-row: 5;
+      grid-row: 4;
       .headline {
         @include headline;
       }
@@ -250,7 +252,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1025px) {
   body {
     header {
       display: grid;
@@ -302,25 +304,36 @@ body {
               text-decoration: none;
               @include paragraph;
             }
+            a:hover {
+              text-decoration: underline;
+              text-decoration-style: solid;
+              text-decoration-color: #ffa033;
+              text-decoration-thickness: 9px;
+              @include paragraph;
+            }
           }
         }
       }
     }
+    .hero {
+      display: grid;
+      grid-template-columns: 3% 94% 3%;
+      grid-template-rows: 100%;
+      .eventImage {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+      }
+    }
     .eventSection {
       display: grid;
-      grid-row: 2;
       grid-template-columns: 4% 46% 46% 4%;
       grid-template-rows: 49% 26% 10% 15%;
 
-      .eventImage {
-        width: 100%;
-
-        grid-column: 2 / span 2;
-        grid-row: 1;
-      }
       #eventInfo {
         grid-column: 2;
-        grid-row: 2;
+        grid-row: 1;
+        margin-top: 30px;
         .headline {
           @include headlineDesktop;
         }
@@ -330,7 +343,7 @@ body {
       }
       .eventMap {
         grid-column: 3;
-        grid-row: 2;
+        grid-row: 1;
 
         margin-top: 60px;
         margin-left: 30px;
@@ -342,7 +355,7 @@ body {
       }
       .prices {
         grid-column: 2;
-        grid-row: 3;
+        grid-row: 2;
         .headline {
           @include headlineDesktop;
         }
@@ -355,7 +368,7 @@ body {
       }
       .openingHours {
         grid-column: 2;
-        grid-row: 4;
+        grid-row: 3;
         .paragraph {
           @include paragraphDesktop;
         }
@@ -363,7 +376,7 @@ body {
 
       .terms {
         grid-column: 3;
-        grid-row: 3 / span 2;
+        grid-row: 2 / span 2;
         text-align: end;
         margin-left: 30px;
         .headline {
