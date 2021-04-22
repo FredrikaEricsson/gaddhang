@@ -15,7 +15,6 @@ $secondary-color: #147eb2;
 @mixin headline {
   font-family: "Sedgwick Ave", cursive;
   color: $text-color;
-
   text-decoration: underline;
   text-decoration-style: solid;
   text-decoration-color: $orange-color;
@@ -38,4 +37,10 @@ $secondary-color: #147eb2;
   font-family: "Lato", sans-serif;
   color: $text-color;
   font-size: 1.5em;
+}
+
+@mixin fillSpace {
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
 }

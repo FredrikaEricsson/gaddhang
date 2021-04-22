@@ -1,26 +1,26 @@
-let mobileAnimation = window.matchMedia("(max-width: 768px)");
-
-window.onloa = (event) => {
+window.onload = (event) => {
   let pikeBus = document.getElementById("pikeBus");
-  let mobileAnimation = window.matchMedia("(max-width: 768px)");
-  if (mobileAnimation.matches) {
-    gsap.set(pikeBus, {
-      rotation: 10,
-    });
-    gsap.to(pikeBus, {
-      rotation: -10,
-      duration: 2,
-      repeat: -1,
-      repeatDelay: 3,
-    });
-    gsap.to(pikeBus, {
-      rotation: 10,
-      duration: 3,
-      delay: 2,
-      repeat: -1,
-      repeatDelay: 2,
-    });
 
+  gsap.set(pikeBus, {
+    rotation: 10,
+  });
+  gsap.to(pikeBus, {
+    rotation: -10,
+    duration: 2,
+    repeat: -1,
+    repeatDelay: 3,
+  });
+  gsap.to(pikeBus, {
+    rotation: 10,
+    duration: 3,
+    delay: 2,
+    repeat: -1,
+    repeatDelay: 2,
+  });
+
+  let mobileAnimation = window.matchMedia("(max-width: 768px)");
+  let tabletAnimation = window.matchMedia("(max-width: 1024px)");
+  if (mobileAnimation.matches) {
     gsap.to(pikeBus, {
       x: 160,
       duration: 3,
@@ -28,24 +28,15 @@ window.onloa = (event) => {
       ease: "none",
       yoyo: true,
     });
+  } else if (tabletAnimation.matches) {
+    gsap.to(pikeBus, {
+      x: 350,
+      duration: 6,
+      repeat: -1,
+      ease: "none",
+      yoyo: true,
+    });
   } else {
-    gsap.set(pikeBus, {
-      rotation: 10,
-    });
-    gsap.to(pikeBus, {
-      rotation: -10,
-      duration: 2,
-      repeat: -1,
-      repeatDelay: 3,
-    });
-    gsap.to(pikeBus, {
-      rotation: 10,
-      duration: 3,
-      delay: 2,
-      repeat: -1,
-      repeatDelay: 2,
-    });
-
     gsap.to(pikeBus, {
       x: 950,
       duration: 10,
