@@ -4,7 +4,7 @@
 
 body {
   background-color: $background-color;
-  @include layoutMobileContainer;
+  @include layoutContainer;
   header {
     grid-row: 1;
     .menu {
@@ -249,7 +249,7 @@ body {
 //Tablet and landscape mobile
 @media only screen and (min-width: 768px) {
   body {
-    @include layoutTabletContainer;
+    @include layoutContainer;
     header {
       display: grid;
       grid-row: 1;
@@ -321,6 +321,13 @@ body {
         grid-row: 4;
       }
     }
+    .animation {
+      .water {
+        height: 50px;
+
+        top: -70px;
+      }
+    }
     #aboutUsSection {
       grid-row: 5;
       display: grid;
@@ -351,7 +358,7 @@ body {
 //Desktop
 @media only screen and (min-width: 1025px) {
   body {
-    @include layoutDesktopContainer;
+    @include layoutContainer;
     header {
       display: grid;
       grid-row: 1;

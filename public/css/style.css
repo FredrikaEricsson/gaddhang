@@ -5,6 +5,16 @@ body {
   display: grid;
   grid-template-rows: 4% 10% 48% 8% 23% 7%;
   grid-template-columns: 100%; }
+  @media only screen and (min-width: 768px) {
+    body {
+      display: grid;
+      grid-template-rows: 4% 20% 35% 16% 17% 8%;
+      grid-template-columns: 100%; } }
+  @media only screen and (min-width: 1025px) {
+    body {
+      display: grid;
+      grid-template-rows: 6% 27% 31% 10% 18% 8%;
+      grid-template-columns: 100%; } }
   body header {
     grid-row: 1; }
     body header .menu {
@@ -225,9 +235,22 @@ body {
 
 @media only screen and (min-width: 768px) {
   body {
+    margin: 0;
     display: grid;
-    grid-template-rows: 4% 20% 35% 16% 17% 8%;
-    grid-template-columns: 100%; }
+    grid-template-rows: 4% 10% 48% 8% 23% 7%;
+    grid-template-columns: 100%; } }
+  @media only screen and (min-width: 768px) and (min-width: 768px) {
+    body {
+      display: grid;
+      grid-template-rows: 4% 20% 35% 16% 17% 8%;
+      grid-template-columns: 100%; } }
+  @media only screen and (min-width: 768px) and (min-width: 1025px) {
+    body {
+      display: grid;
+      grid-template-rows: 6% 27% 31% 10% 18% 8%;
+      grid-template-columns: 100%; } }
+
+@media only screen and (min-width: 768px) {
     body header {
       display: grid;
       grid-row: 1; }
@@ -280,6 +303,9 @@ body {
       body .eventSection .terms {
         grid-column: 2 / span 2;
         grid-row: 4; }
+    body .animation .water {
+      height: 50px;
+      top: -70px; }
     body #aboutUsSection {
       grid-row: 5;
       display: grid;
@@ -301,9 +327,22 @@ body {
 
 @media only screen and (min-width: 1025px) {
   body {
+    margin: 0;
     display: grid;
-    grid-template-rows: 6% 27% 31% 10% 18% 8%;
-    grid-template-columns: 100%; }
+    grid-template-rows: 4% 10% 48% 8% 23% 7%;
+    grid-template-columns: 100%; } }
+  @media only screen and (min-width: 1025px) and (min-width: 768px) {
+    body {
+      display: grid;
+      grid-template-rows: 4% 20% 35% 16% 17% 8%;
+      grid-template-columns: 100%; } }
+  @media only screen and (min-width: 1025px) and (min-width: 1025px) {
+    body {
+      display: grid;
+      grid-template-rows: 6% 27% 31% 10% 18% 8%;
+      grid-template-columns: 100%; } }
+
+@media only screen and (min-width: 1025px) {
     body header {
       display: grid;
       grid-row: 1; }

@@ -1,20 +1,19 @@
 //contains all the CSS that handles the layout, such as the container and any grid systems.
 
-@mixin layoutMobileContainer {
+@mixin layoutContainer {
   margin: 0;
   display: grid;
   grid-template-rows: 4% 10% 48% 8% 23% 7%;
   grid-template-columns: 100%;
-}
 
-@mixin layoutTabletContainer {
-  display: grid;
-  grid-template-rows: 4% 20% 35% 16% 17% 8%;
-  grid-template-columns: 100%;
-}
-
-@mixin layoutDesktopContainer {
-  display: grid;
-  grid-template-rows: 6% 27% 31% 10% 18% 8%;
-  grid-template-columns: 100%;
+  @media only screen and (min-width: 768px) {
+    display: grid;
+    grid-template-rows: 4% 20% 35% 16% 17% 8%;
+    grid-template-columns: 100%;
+  }
+  @media only screen and (min-width: 1025px) {
+    display: grid;
+    grid-template-rows: 6% 27% 31% 10% 18% 8%;
+    grid-template-columns: 100%;
+  }
 }

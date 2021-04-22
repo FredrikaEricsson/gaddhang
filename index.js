@@ -1,3 +1,5 @@
+// Very cool animation of the Pike bus, rocking in the water
+
 window.onload = (event) => {
   let pikeBus = document.getElementById("pikeBus");
 
@@ -46,6 +48,8 @@ window.onload = (event) => {
     });
   }
 };
+
+//A function to unfold the menu in the mobile
 
 function unfoldMenu() {
   let menuItems = document.getElementById("menuItems");
